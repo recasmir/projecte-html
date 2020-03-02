@@ -1,0 +1,119 @@
+*{
+	box-sizing: border-box;
+    }
+/*Top menu*/
+.bg-blue{
+    background-color: #000D32;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+  }
+/*Fonts*/
+@font-face {
+    font-family: veganFont;
+    src: url(font\VeganStyleFont.ttf);
+ }
+h1, h2, h3, h4, h5, h6{
+    font-family: "Gloria Hallelujah";
+    color: #282623;
+}
+p, li, label{
+    font-family: "Montserrat";
+    color: #282623;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+}
+/*buttons*/
+.btn-menu{
+    color: #fff;
+    border-color: #fff;
+}
+.btn-outline-success {
+    color: #B35B46;
+    border-color: #B35B46;
+  }
+  
+  .btn-outline-success:hover, .btn-menu:hover {
+    color: #fff;
+    background-color: #B35B46;
+    border-color: #B35B46;
+  }
+  .btn-outline-info {
+    color: #000D32;
+    border-color: #000D32;
+  }
+  
+  .btn-outline-info:hover {
+    color: #fff;
+    background-color: #000D32;
+    border-color: #000D32;
+  }
+/*meet section*/
+#meet{
+    /*background-image: linear-gradient(to right, #CC5F45 , rgb(255, 174, 0));*/
+}
+.section-line{
+    border-bottom: 1px solid #B35B46;
+    padding: 15px 30px;
+}
+#meet ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/*Rental home page*/
+#rental{
+    /*background-color: #CC5F45;*/
+    background-image: linear-gradient(to right, rgb(255, 174, 0), #CC5F45);
+}
+#rental-description{
+    position: absolute;
+    background-color:  rgba(255,255,255,0.8);
+    left: 600px;
+	top:100px;
+	z-index: 80;
+	padding-top: 10px;
+    box-shadow: 2px 2px 2px #572C21;
+    width: 600px;
+}
+@media screen and (max-width: 576px) {
+    #rental-description{
+       position: relative;
+       left: 0px;
+       top: 20px;
+       padding: 0 30px;
+       margin-bottom: 30px;
+    }
+}
+#rental-pic{
+    position: relative;
+}
+#rental-img{
+    height: auto;
+}
+/*contact section*/
+/*footer*/
+#footer{
+    background-color: #000D32;
+}
+#footer h4{
+    color: rgba(255, 255, 255, 0.7);
+}
+#footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#footer li{
+    color: rgba(255, 255, 255, 0.7);
+}
+#footer p{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+.border-bottom-footer{
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
