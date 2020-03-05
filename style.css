@@ -50,6 +50,92 @@ h1{
     background-color: #000D32;
     border-color: #000D32;
   }
+/*register form*/
+input[type=text], input[type=email], input[type=password], select, textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  .close-form{
+      text-align: right;
+      color:#000D32;
+      font-size: 20px;
+  }
+  .close-form:hover{
+      cursor: pointer;
+      font-weight: 800;
+      color: #B35B46;
+  }
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 1000px;
+    height: auto;
+    background-color: #f2f2f2;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: -1250%;
+  }
+  @media screen and (max-width: 768px) {
+    .popup .popuptext{
+        left: -115%;
+        top: -600%;
+        width: 740px;
+    }
+}
+  @media screen and (max-width: 576px) {
+    .popup .popuptext{
+        left: -115%;
+        top: -600%;
+        width: 350px;
+    }
+}
+  /* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  .popup .hide {
+    visibility: hidden;
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+  }
+
+  /* Add animation (fade in/out the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+  @-webkit-keyframes fadeOut {
+    from {opacity: 1;} 
+    to {opacity: 0;}
+  }
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity:0 ;}
+  }
 /*meet section*/
 #meet{
     /*background-image: linear-gradient(to right, #CC5F45 , rgb(255, 174, 0));*/
