@@ -33,23 +33,21 @@ h1{
 .btn-outline-success {
     color: #B35B46;
     border-color: #B35B46;
-  }
-  
-  .btn-outline-success:hover, .btn-menu:hover {
-    color: #fff;
-    background-color: #B35B46;
-    border-color: #B35B46;
-  }
-  .btn-outline-info {
-    color: #000D32;
-    border-color: #000D32;
-  }
-  
-  .btn-outline-info:hover {
-    color: #fff;
-    background-color: #000D32;
-    border-color: #000D32;
-  }
+  } 
+.btn-outline-success:hover, .btn-menu:hover {
+  color: #fff;
+  background-color: #B35B46;
+  border-color: #B35B46;
+}
+.btn-outline-info {
+  color: #000D32;
+  border-color: #000D32;
+}
+.btn-outline-info:hover {
+  color: #fff;
+  background-color: #000D32;
+  border-color: #000D32;
+}
 /*register form*/
 input[type=text], input[type=email], input[type=password], select, textarea {
     width: 100%;
@@ -57,89 +55,98 @@ input[type=text], input[type=email], input[type=password], select, textarea {
     border-radius: 4px;
     resize: vertical;
   }
-  .close-form{
-      text-align: right;
-      color:#000D32;
-      font-size: 20px;
-  }
-  .close-form:hover{
-      cursor: pointer;
-      font-weight: 800;
-      color: #B35B46;
-  }
-
-/* Popup container - can be anything you want */
-.popup {
-    position: relative;
-    display: inline-block;
+.close-form{
+    border: 1px solid #000D32;
+    border-radius: 50%;
+    color:#000D32;
+    font-size: 30px;
+    display: block;
+    height: 30px;
+    width: 30px;
+    line-height: 28px;
+}
+.close-form:hover{
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 1000px;
-    height: auto;
-    background-color: #f2f2f2;
-    color: #000;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    left: -1250%;
-  }
-  @media screen and (max-width: 768px) {
-    .popup .popuptext{
-        left: -115%;
-        top: -600%;
-        width: 740px;
-    }
+    color: #B35B46;
 }
-  @media screen and (max-width: 576px) {
-    .popup .popuptext{
-        left: -115%;
-        top: -600%;
-        width: 350px;
-    }
+/*Sign in form*/
+.popuptext-sign-in{
+  visibility: hidden;
+  background-color: #f2f2f2;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
-  /* Toggle this class - hide and show the popup */
-.popup .show {
+/* Popup Register Form */
+  .popuptext {
+  visibility: hidden;
+  background-color: #f2f2f2;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 80%;
+  left: 20%;
+  transform: translate(0%, -80%);
+}
+@media screen and (max-width: 1024px) {
+  .popuptext{
+    top:0;
+    left:0;
+    transform: translate(15%, 0%);
+  }
+}
+@media screen and (max-width: 812px) {
+  .popuptext{
+    top:0;
+    left:0;
+    transform: translate(0%, -1%);
+  }
+}
+/* @media screen and (max-width: 576px) {
+  .popuptext{
+    top:0;
+    left:0;
+    transform: translate(0%, -1%);
+  }
+} */
+/* Toggle this class - hide and show the popup */
+.show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
   }
-  .popup .hide {
-    visibility: hidden;
-    -webkit-animation: fadeOut 1s;
-    animation: fadeOut 1s;
-  }
-
-  /* Add animation (fade in/out the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
-  @-webkit-keyframes fadeOut {
-    from {opacity: 1;} 
-    to {opacity: 0;}
-  }
-@keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity:0 ;}
-  }
-/*meet section*/
-#meet{
-    /*background-image: linear-gradient(to right, #CC5F45 , rgb(255, 174, 0));*/
+.hide {
+  visibility: hidden;
+  -webkit-animation: fadeOut 1s;
+  animation: fadeOut 1s;
 }
+/* Add animation (fade in/out the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+@-webkit-keyframes fadeOut {
+  from {opacity: 1;} 
+  to {opacity: 0;}
+}
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity:0 ;}
+}
+/*meet section*/
 .section-line{
     border-bottom: 1px solid #B35B46;
     padding: 15px 30px;
@@ -151,16 +158,12 @@ input[type=text], input[type=email], input[type=password], select, textarea {
 }
 /*Rental home page*/
 #rental{
-    /*background-color: #CC5F45;*/
     background-image: linear-gradient(to right, rgb(255, 174, 0), #CC5F45);
 }
 #rental-description{
-    position: absolute;
     background-color:  rgba(255,255,255,0.8);
-    left: 600px;
-	top:100px;
-	z-index: 80;
-	padding-top: 10px;
+	  z-index: 1;
+	  padding: 20px;
     box-shadow: 2px 2px 2px #572C21;
     width: 600px;
 }
@@ -173,13 +176,6 @@ input[type=text], input[type=email], input[type=password], select, textarea {
        margin-bottom: 30px;
     }
 }
-#rental-pic{
-    position: relative;
-}
-#rental-img{
-    height: auto;
-}
-/*contact section*/
 /*footer*/
 #footer{
     background-color: #000D32;

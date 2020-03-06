@@ -48,123 +48,147 @@
         </li>
       </ul>
       <div class="my-2 my-lg-0">
-        <button style="margin-right: 10px;" class="btn btn-menu my-2 my-sm-0">Sign in</button>
-        <button class="btn btn-menu my-2 my-sm-0 popup" onclick="openRegisterForm()">Register
-         <div id="register" class="px-4 popuptext">
-            <fieldset>
-                <form action="" method="">
-                    <div class="row mt-4">
-                      <div class="col-12 pr-4">
-                        <p class="close-form" onclick="closeRegisterForm()">X</p>
-                      </div>
-                        <div class="col-12 col-md-4 col-xl-3">
-                            <label for="email"><span class="text-danger">* </span>eMail:</label><br>
-                            <input type="email" id="email" name="email" value="" required>
-                        </div>
-                        <div class="col-12 col-md-4 col-xl-3">
-                            <label for="pwd"><span class="text-danger">* </span>Password:</label><br>
-                            <input type="password" id="pwd" name="pwd" required>
-                        </div>
-                        <div class="col-12 col-md-4 col-xl-3">
-                            <label for="repwd"><span class="text-danger">* </span>Repeat password:</label><br>
-                            <input type="password" id="repwd" name="repwd" value="" required>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-12 col-md-3">
-                            <label for="fname"><span class="text-danger">* </span>First name:</label><br>
-                            <input type="text" id="fname" name="fname" value="" required> 
-                        </div>
-                        <div class="col-12 col-md-3">
-                            <label for="lname"><span class="text-danger">* </span>Last name:</label><br>
-                            <input type="text" id="lname" name="lname" value="" required>
-                        </div>
-                        <div class="col-12 col-md-3">
-                            <label for="age">Age:</label><br>
-                            <select id="age" name="age">
-                                <option value="-25">-25</option>
-                                <option value="26-35">26-35</option>
-                                <option value="36-45">36-45</option>
-                                <option value="46-55">46-55</option>
-                                <option value="55+">55+</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-3">
-                            <label for="gender">Gender:</label><br>
-                            <select id="gender" name="gender">
-                                <option value="female">Female</option>
-                                <option value="male">Male</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-12 col-md-3">
-                            <label for="traveller">Type of traveller:</label><br>
-                            <select id="trveller" name="traveller">
-                                <option value="family with kids">Family with kids</option>
-                                <option value="couple">Couple</option>
-                                <option value="individuals">Individuals</option>
-                                <option value="friends">Friends</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-3">
-                            <label for="nkids">Number of children:</label><br>
-                            <input type="text" id="nkids" name="nkids" value="">
-                        </div>
-                        <div class="col-12 col-md-3">
-                            <label for="akids">Age & gender of kids:</label><br>
-                            <input type="text" id="akids" name="akids" value="">
-                        </div>
-                        <div class="col-12 col-md-3">
-                            <label>Do you travel with a dog?</label><br>
-                            <input type="radio" id="yes" name="dog" value="yes">
-                            <label for="yes"> Yes</label>
-                            <input type="radio" id="no" name="dog" value="no">
-                            <label for="no"> No</label>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-12 col-md-3">
-                            <label for="transport">Method of transport</label><br>
-                            <select id="transport" name="transport">
-                                <option value="motorhome">Motorhome</option>
-                                <option value="bcamper">Big camper > 4m</option>
-                                <option value="scamper">Small camper < 4m</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-9">
-                            <label>I'd like to find sombody for:</label><br>
-                            <input type="checkbox" id="wknd" name="wknd" value="Weekend trips">
-                            <label for="wknd" class="pr-3"> Weekend trips</label>
-                            <input type="checkbox" id="week" name="week" value="Week trips">
-                            <label for="week" class="pr-3"> Week trips</label>
-                            <input type="checkbox" id="adventure" name="adventure" value="Long adventures">
-                            <label for="adventure"> Long adventures, 2 weeks+</label>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <label for="about">Tell us a bit more about you.</label><br>
-                            <textarea id="about" name="about" rows="5" cols="100">
-                            </textarea>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <input class="btn btn-outline-success my-2" type="submit" value="Send">
-                            <p class="text-danger mt-2" style="font-size: 10px;">*this field is required</p>
-                        </div>
-                    </div>
-                </form>
-            </fieldset>
-        </div>
-       <!-- <div id="register" class="popuptext">This is a popup</div> -->
-        </button>
+        <button style="margin-right: 10px;" class="btn btn-menu my-2 my-sm-0" onclick="openSignInForm()">Sign in</button>
+        <button class="btn btn-menu my-2 my-sm-0" onclick="openRegisterForm()">Register</button>
       </div>
     </div>
   </nav>
-  
+  <div id="register" class="px-4 popuptext">
+    <fieldset>
+        <form action="" method="">
+            <div class="row justify-content-end mt-3">
+              <div class="col-auto" onclick="closeRegisterForm()">
+                <p class="close-form">&times</p>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 col-xl-3">
+                    <label for="email"><span class="text-danger">* </span>eMail:</label><br>
+                    <input type="email" id="email" name="email" value="" required>
+                </div>
+                <div class="col-12 col-md-4 col-xl-3">
+                    <label for="pwd"><span class="text-danger">* </span>Password:</label><br>
+                    <input type="password" id="pwd" name="pwd" required>
+                </div>
+                <div class="col-12 col-md-4 col-xl-3">
+                    <label for="repwd"><span class="text-danger">* </span>Repeat password:</label><br>
+                    <input type="password" id="repwd" name="repwd" value="" required>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 col-md-3">
+                    <label for="fname"><span class="text-danger">* </span>First name:</label><br>
+                    <input type="text" id="fname" name="fname" value="" required> 
+                </div>
+                <div class="col-12 col-md-3">
+                    <label for="lname"><span class="text-danger">* </span>Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value="" required>
+                </div>
+                <div class="col-12 col-md-3">
+                    <label for="age">Age:</label><br>
+                    <select id="age" name="age">
+                        <option value="-25">-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-45">36-45</option>
+                        <option value="46-55">46-55</option>
+                        <option value="55+">55+</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-3">
+                    <label for="gender">Gender:</label><br>
+                    <select id="gender" name="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 col-md-3">
+                    <label for="traveller">Type of traveller:</label><br>
+                    <select id="trveller" name="traveller">
+                        <option value="family with kids">Family with kids</option>
+                        <option value="couple">Couple</option>
+                        <option value="individuals">Individuals</option>
+                        <option value="friends">Friends</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-3">
+                    <label for="nkids">Number of children:</label><br>
+                    <input type="text" id="nkids" name="nkids" value="">
+                </div>
+                <div class="col-12 col-md-3">
+                    <label for="akids">Age & gender of kids:</label><br>
+                    <input type="text" id="akids" name="akids" value="">
+                </div>
+                <div class="col-12 col-md-3">
+                    <label>Do you travel with a dog?</label><br>
+                    <input type="radio" id="yes" name="dog" value="yes">
+                    <label for="yes"> Yes</label>
+                    <input type="radio" id="no" name="dog" value="no">
+                    <label for="no"> No</label>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 col-md-3">
+                    <label for="transport">Method of transport</label><br>
+                    <select id="transport" name="transport">
+                        <option value="motorhome">Motorhome</option>
+                        <option value="bcamper">Big camper > 4m</option>
+                        <option value="scamper">Small camper < 4m</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-9">
+                    <label>I'd like to find sombody for:</label><br>
+                    <input type="checkbox" id="wknd" name="wknd" value="Weekend trips">
+                    <label for="wknd" class="pr-3"> Weekend trips</label>
+                    <input type="checkbox" id="week" name="week" value="Week trips">
+                    <label for="week" class="pr-3"> Week trips</label>
+                    <input type="checkbox" id="adventure" name="adventure" value="Long adventures">
+                    <label for="adventure"> Long adventures, 2 weeks+</label>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <label for="about">Tell us a bit more about you.</label><br>
+                    <textarea id="about" name="about" rows="5" cols="100">
+                    </textarea>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <input class="btn btn-outline-success my-2" type="submit" value="Send">
+                    <p class="text-danger mt-2" style="font-size: 10px;">*this field is required</p>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+</div>
+<div id="sign-in" class="px-4 popuptext-sign-in">
+  <fieldset>
+      <form action="" method="">
+          <div class="row justify-content-end mt-3">
+            <div class="col-auto" onclick="closeSignInForm()">
+              <p class="close-form">&times</p>
+            </div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-12">
+                  <label for="email"><span class="text-danger">* </span>eMail:</label><br>
+                  <input type="email" id="email" name="email" value="" required>
+              </div>
+              <div class="col-12">
+                  <label for="pwd"><span class="text-danger">* </span>Password:</label><br>
+                  <input type="password" id="pwd" name="pwd" required>
+              </div>
+              <div class="col-12">
+                  <input class="btn btn-outline-success my-2" type="submit" value="Send">
+                  <p class="text-danger mt-2" style="font-size: 10px;">*this field is required</p>
+              </div>
+          </div>
+      </form>
+  </fieldset>
+</div>
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -243,10 +267,13 @@
         <p><a class="btn btn-outline-info my-2" href="#" role="button">View details &raquo;</a></p>
       </div>
     </section>
-    <section id="rental" class="row my-3">
+    <section id="rental" class="row my-3 mr-0">
       <div id="rental-pic" class="col-12 col-md-6 px-0">
         <img src="img/rental-inside-out-view.jpg" id="rental-img" class="img-fluid" alt="motorhome view">
-        <div id="rental-description" class="col-12 container-fluid">
+
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+        <div id="rental-description">
           <h2>Rent with us</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellendus dignissimos vero dolor, tempora voluptatibus nisi possimus ipsa quasi minus fuga ea rem magnam delectus doloremque nihil nobis, sit unde!</p>
           <button class="btn btn-outline-info my-2">Rent now</button>
@@ -273,7 +300,7 @@
           <button type="submit" class="btn btn-outline-success my-2">Contact us</button>
         </div>
       </form>
-<footer id="footer" class="row my-3 px-5 py-3">
+<footer id="footer" class="row my-3 px-5 py-3 mr-0">
   <div class="col-12 col-md-6 pb-2">
     <h4>Motorhome Adventure</h4>
     <ul>
@@ -285,8 +312,8 @@
   </div>
   <div class="col-12 col-md-6 pb-2">
     <h4>Join our community</h4>
-    <button class="btn btn-outline-success my-2">Register here</button><br>
-    <button class="btn btn-outline-success my-2">Sign in</button>
+    <button class="btn btn-outline-success my-2" onclick="openRegisterForm()">Register here</button><br>
+    <button class="btn btn-outline-success my-2" onclick="openSignInForm()">Sign in</button>
   </div>
   <div class="col-12">
     <img class="img-fluid" src="img/ma-line-light-2.PNG" alt="" width="" height="">
@@ -310,9 +337,16 @@
       }
       function closeRegisterForm() {
         var popup = document.getElementById("register");
-        popup.classList.add("hide");
+        popup.classList.remove("show");
       }
-      //classList.toggle
+      function openSignInForm() {
+        var popup = document.getElementById("sign-in");
+        popup.classList.add("show");
+      }
+      function closeSignInForm() {
+        var popup = document.getElementById("sign-in");
+        popup.classList.remove("show");
+      }
       </script>
   </body>
 </html>
