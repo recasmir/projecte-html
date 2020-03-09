@@ -15,7 +15,7 @@
     <title>Motorhome Adventure</title>
 </head>
 <body>
-  <main class="container-fluid p-0">
+  <main id="container" class="container-fluid p-0">
   <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
     <a class="navbar-brand" href="#">MA</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,20 +48,26 @@
         </li>
       </ul>
       <div class="my-2 my-lg-0">
-        <button style="margin-right: 10px;" class="btn btn-menu my-2 my-sm-0" onclick="openSignInForm()">Sign in</button>
-        <button class="btn btn-menu my-2 my-sm-0" onclick="openRegisterForm()">Register</button>
+        <button style="margin-right: 10px;" class="btn btn-menu my-2 my-sm-0" onclick="overlayOn(); openSignInForm()">Sign in</button>
+        <button class="btn btn-menu my-2 my-sm-0" onclick="overlayOn(); openRegisterForm()">Register</button>
       </div>
     </div>
   </nav>
+  <div id="overlay"></div>
   <div id="register" class="px-4 popuptext">
     <fieldset>
         <form action="" method="">
             <div class="row justify-content-end mt-3">
-              <div class="col-auto" onclick="closeRegisterForm()">
+              <div class="col-auto" onclick="closeRegisterForm(); overlayOff()">
                 <p class="close-form" aria-label="close register form">&times</p>
               </div>
             </div>
             <div class="row">
+              <div class="col-12 text-center" style="margin-top: -30px;">
+                <h2>Join our community</h2>
+              </div>
+            </div>
+            <div class="row mt-4">
                 <div class="col-12 col-md-4 col-xl-3">
                     <label for="email"><span class="text-danger">* </span>eMail:</label><br>
                     <input type="email" id="email" name="email" value="" required>
@@ -168,18 +174,23 @@
   <fieldset>
       <form action="" method="">
           <div class="row justify-content-end mt-3">
-            <div class="col-auto" onclick="closeSignInForm()">
+            <div class="col-auto" onclick="closeSignInForm(); overlayOff()">
               <p class="close-form" aria-label="close sign in form">&times</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center" style="margin-top: -30px;">
+              <h2>Welcome back!</h2>
             </div>
           </div>
           <div class="row mt-4">
               <div class="col-12">
                   <label for="email"><span class="text-danger">* </span>eMail:</label><br>
-                  <input type="email" id="email" name="email" value="" required>
+                  <input type="email" id="email" name="email" size="5" value="" required>
               </div>
-              <div class="col-12">
+              <div class="col-12 mt-2">
                   <label for="pwd"><span class="text-danger">* </span>Password:</label><br>
-                  <input type="password" id="pwd" name="pwd" required>
+                  <input type="password" id="pwd" name="pwd" size="5" required>
               </div>
               <div class="col-12">
                   <input class="btn btn-outline-success my-2" type="submit" value="Send">
@@ -234,14 +245,14 @@
           <li>Individuals</li>
         </ul>
         <br>
-        <button class="btn btn-outline-info my-2 my-sm-0">Register here</button>
+        <center><button class="btn btn-outline-info my-2 my-sm-0">Register here</button></center>
       </div>
       <div class="col-12 col-md-6 pl-5">
-        <img class="img-fluid" src="img/meet-pic-round.png" alt="placeholder image">
+        <img class="img-fluid" src="img/meet-pic-round.png" alt="friends in campervan">
         </div>
       </div>
-      <div class="col-12">
-        <img class="img-fluid" src="img/ma-line-black.PNG" alt="" width="" height="">
+      <div class="col-12 mt-2">
+        <img class="img-fluid" src="img/logo-line-black.PNG" alt="" width="" height="">
       </div>
     </section>
     <section id="resources" class="row my-3 px-5 justify-content-around">
@@ -286,18 +297,19 @@
       </div>
       
         <div class="col-md-4">
-          <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname"><br><br>
-          <label for="lname">Last name:</label><br>
-          <input type="text" id="lname" name="lname"><br>
+          <label for="fname"><span class="text-danger">* </span>First name:</label><br>
+          <input type="text" id="fname" name="fname" required><br><br>
+          <label for="lname"><span class="text-danger">* </span>Last name:</label><br>
+          <input type="text" id="lname" name="lname" required><br>
         </div>
         <div class="col-md-4">
-          <label for="comments">What would you like to know?:</label><br>
-          <textarea id="comments" name="comments" rows="5" cols="60">
+          <label for="comments"><span class="text-danger">* </span>What would you like to know?:</label><br>
+          <textarea id="comments" name="comments" rows="5" cols="60" required>
           </textarea>
         </div>
-        <div class="col-12 d-flex justify-content-center">
-          <button type="submit" class="btn btn-outline-success my-2">Contact us</button>
+        <div class="col-12 text-center">
+          <input class="btn btn-outline-success my-2" type="submit" value="Send"><br>
+          <p class="text-danger mt-2" style="font-size: 10px;">*this field is required</p>
         </div>
       </form>
 <footer id="footer" class="row my-3 px-5 py-3 mr-0">
@@ -312,11 +324,11 @@
   </div>
   <div class="col-12 col-md-6 pb-2">
     <h4>Join our community</h4>
-    <button class="btn btn-outline-success my-2" onclick="openRegisterForm()">Register here</button><br>
-    <button class="btn btn-outline-success my-2" onclick="openSignInForm()">Sign in</button>
+    <button class="btn btn-outline-success my-2" onclick="overlayOn(); openRegisterForm()">Register here</button><br>
+    <button class="btn btn-outline-success my-2" onclick="overlayOn(); openSignInForm()">Sign in</button>
   </div>
   <div class="col-12">
-    <img class="img-fluid" src="img/ma-line-light-2.PNG" alt="" width="" height="">
+    <img class="img-fluid" src="img/logo-line-white-p2.PNG" alt="" width="" height="">
   </div>
   <div class="col-12 py-2">
     <p class="my-0 text-center">&copy 2020 mirdesign.es All rights reserved.</p>
@@ -338,6 +350,12 @@
       function closeRegisterForm() {
         var popup = document.getElementById("register");
         popup.classList.remove("show");
+      }
+      function overlayOn() {
+        document.getElementById("overlay").style.display = "block";
+      }
+      function overlayOff() {
+        document.getElementById("overlay").style.display = "none";
       }
       function openSignInForm() {
         var popup = document.getElementById("sign-in");
