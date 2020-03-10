@@ -49,7 +49,14 @@ h1{
   border-color: #000D32;
 }
 /*register form*/
-#overlay {
+.modal-footer{
+  border: none;
+}
+.modal-header{
+  border-bottom: none;
+}
+
+/*#overlay {
   position: fixed;
   display: none;
   width: 100%;
@@ -83,7 +90,7 @@ input[type=text], input[type=email], input[type=password], select, textarea {
     color: #B35B46;
 }
 /*Sign in form*/
-.popuptext-sign-in{
+/*.popuptext-sign-in{
   visibility: hidden;
   background-color: #f2f2f2;
   color: #000;
@@ -97,7 +104,7 @@ input[type=text], input[type=email], input[type=password], select, textarea {
   transform: translate(-50%, 0%);
 }
 /* Popup Register Form */
-  .popuptext {
+  /*.popuptext {
   visibility: hidden;
   background-color: #f2f2f2;
   color: #000;
@@ -132,7 +139,7 @@ input[type=text], input[type=email], input[type=password], select, textarea {
   }
 } */
 /* Toggle this class - hide and show the popup */
-.show {
+/*.show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
@@ -143,7 +150,7 @@ input[type=text], input[type=email], input[type=password], select, textarea {
   animation: fadeOut 1s;
 }
 /* Add animation (fade in/out the popup) */
-@-webkit-keyframes fadeIn {
+/*@-webkit-keyframes fadeIn {
   from {opacity: 0;} 
   to {opacity: 1;}
 }
