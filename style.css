@@ -1,0 +1,225 @@
+*{
+	box-sizing: border-box;
+    }
+/*Top menu*/
+.bg-blue{
+    background-color: #000D32;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+  }
+/*Fonts*/
+@font-face {
+    font-family: veganFont;
+    src: url(font\VeganStyleFont.ttf);
+ }
+h1, h2, h3, h4, h5, h6{
+    font-family: "Gloria Hallelujah";
+    color: #282623;
+}
+p, li, label{
+    font-family: "Montserrat";
+    color: #282623;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+}
+/*buttons*/
+.btn-menu{
+    color: #fff;
+    border-color: #fff;
+}
+.btn-outline-success {
+    color: #B35B46;
+    border-color: #B35B46;
+  } 
+.btn-outline-success:hover, .btn-menu:hover {
+  color: #fff;
+  background-color: #B35B46;
+  border-color: #B35B46;
+}
+.btn-outline-info {
+  color: #000D32;
+  border-color: #000D32;
+}
+.btn-outline-info:hover {
+  color: #fff;
+  background-color: #000D32;
+  border-color: #000D32;
+}
+/*register form*/
+.modal-footer{
+  border: none;
+}
+.modal-header{
+  border-bottom: none;
+}
+input[type=text], input[type=email], input[type=password], select, textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/*#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.close-form{
+    border: 1px solid #000D32;
+    border-radius: 50%;
+    color:#000D32;
+    font-size: 30px;
+    display: block;
+    height: 30px;
+    width: 30px;
+    line-height: 28px;
+}
+.close-form:hover{
+    cursor: pointer;
+    color: #B35B46;
+}
+/*Sign in form*/
+/*.popuptext-sign-in{
+  visibility: hidden;
+  background-color: #f2f2f2;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+/* Popup Register Form */
+  /*.popuptext {
+  visibility: hidden;
+  background-color: #f2f2f2;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 2;
+  top: 80%;
+  left: 20%;
+  transform: translate(0%, -80%);
+}
+@media screen and (max-width: 1024px) {
+  .popuptext{
+    top:0;
+    left:0;
+    transform: translate(15%, 0%);
+  }
+}
+@media screen and (max-width: 812px) {
+  .popuptext{
+    top:0;
+    left:0;
+    transform: translate(0%, -1%);
+  }
+}
+/* @media screen and (max-width: 576px) {
+  .popuptext{
+    top:0;
+    left:0;
+    transform: translate(0%, -1%);
+  }
+} */
+/* Toggle this class - hide and show the popup */
+/*.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+.hide {
+  visibility: hidden;
+  -webkit-animation: fadeOut 1s;
+  animation: fadeOut 1s;
+}
+/* Add animation (fade in/out the popup) */
+/*@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+@-webkit-keyframes fadeOut {
+  from {opacity: 1;} 
+  to {opacity: 0;}
+}
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity:0 ;}
+}
+/*meet section*/
+.section-line{
+    border-bottom: 1px solid #B35B46;
+    padding: 15px 30px;
+}
+#meet ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#meet li{
+  text-align: center;
+}
+/*Rental home page*/
+#rental{
+    background-image: linear-gradient(to right, rgb(255, 174, 0), #CC5F45);
+}
+#rental-description{
+    background-color:  rgba(255,255,255,0.8);
+	  z-index: 1;
+	  padding: 20px;
+    box-shadow: 2px 2px 2px #572C21;
+    width: 600px;
+}
+@media screen and (max-width: 576px) {
+    #rental-description{
+       position: relative;
+       left: 0px;
+       top: 20px;
+       padding: 0 30px;
+       margin-bottom: 30px;
+    }
+}
+/*footer*/
+#footer{
+    background-color: #000D32;
+}
+#footer h4{
+    color: rgba(255, 255, 255, 0.7);
+}
+#footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#footer li{
+    color: rgba(255, 255, 255, 0.7);
+}
+#footer p{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+.border-bottom-footer{
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
