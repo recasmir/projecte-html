@@ -63,33 +63,39 @@
             <h2 class="modal-title" id="exampleModalLabel">Join our community</h2>
           </div>
           <div class="modal-body px-5">
-            <form action="" method="">
+            <form action="registration.html" method="POST" id="registrationFormId" onsubmit="return registerFormValidate()" name="registrationForm">
                 <div class="row">
                     <div class="col-12 col-md-4 col-xl-3">
                         <label for="email"><span class="text-danger">* </span>eMail:</label><br>
-                        <input type="email" id="email" name="email" value="" required>
+                        <input type="text" id="email" name="email">
+                        <div class="invalid-feedback" id="errorEmail"></div>
                     </div>
                     <div class="col-12 col-md-4 col-xl-3">
                         <label for="pwd"><span class="text-danger">* </span>Password:</label><br>
-                        <input type="password" id="pwd" name="pwd" required>
+                        <input type="password" id="pwd" name="pwd">
+                        <div class="invalid-feedback" id="errorPassword"></div>
                     </div>
                     <div class="col-12 col-md-4 col-xl-3">
                         <label for="repwd"><span class="text-danger">* </span>Repeat password:</label><br>
-                        <input type="password" id="repwd" name="repwd" value="" required>
+                        <input type="password" id="repwd" name="repwd">
+                        <div class="invalid-feedback" id="errorPasswordControl"></div>
                     </div>
                 </div>
-                <div class="row mt-4">
+                  <div class="row mt-4">
                     <div class="col-12 col-md-3">
                         <label for="fname"><span class="text-danger">* </span>First name:</label><br>
-                        <input type="text" id="fname" name="fname" value="" required> 
+                        <input type="text" id="fname" name="fname"> 
+                        <div class="invalid-feedback" id="errorFname"></div>
                     </div>
                     <div class="col-12 col-md-3">
                         <label for="lname"><span class="text-danger">* </span>Last name:</label><br>
-                        <input type="text" id="lname" name="lname" value="" required>
+                        <input type="text" id="lname" name="lname">
+                        <div class="invalid-feedback" id="errorLname"></div>
                     </div>
                     <div class="col-12 col-md-3">
                         <label for="age">Age:</label><br>
                         <select id="age" name="age">
+                            <option selected value=""></option>
                             <option value="-25">-25</option>
                             <option value="26-35">26-35</option>
                             <option value="36-45">36-45</option>
@@ -100,21 +106,24 @@
                     <div class="col-12 col-md-3">
                         <label for="gender">Gender:</label><br>
                         <select id="gender" name="gender">
+                            <option selected value=""></option>
                             <option value="female">Female</option>
                             <option value="male">Male</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
-                </div>
-                <div class="row mt-4">
+                  </div>
+                  <div class="row mt-4">
                     <div class="col-12 col-md-3">
-                        <label for="traveller">Type of traveller:</label><br>
-                        <select id="trveller" name="traveller">
+                        <label for="traveller"><span class="text-danger">* </span>Type of traveller:</label><br>
+                        <select id="traveller" name="traveller">
+                          <option selected value=""></option>
                             <option value="family with kids">Family with kids</option>
                             <option value="couple">Couple</option>
                             <option value="individuals">Individuals</option>
                             <option value="friends">Friends</option>
                         </select>
+                        <div class="invalid-feedback" id="errorTraveller"></div>
                     </div>
                     <div class="col-12 col-md-3">
                         <label for="nkids">Number of children:</label><br>
@@ -131,15 +140,17 @@
                         <input type="radio" id="no" name="dog" value="no">
                         <label for="no"> No</label>
                     </div>
-                </div>
-                <div class="row mt-4">
+                  </div>
+                  <div class="row mt-4">
                     <div class="col-12 col-md-3">
-                        <label for="transport">Method of transport</label><br>
+                        <label for="transport"><span class="text-danger">* </span>Method of transport</label><br>
                         <select id="transport" name="transport">
+                            <option selected value=""></option>
                             <option value="motorhome">Motorhome</option>
                             <option value="bcamper">Big camper > 4m</option>
                             <option value="scamper">Small camper < 4m</option>
                         </select>
+                        <div class="invalid-feedback" id="errorTransport"></div>
                     </div>
                     <div class="col-12 col-md-9">
                         <label>I'd like to find sombody for:</label><br>
@@ -150,18 +161,18 @@
                         <input type="checkbox" id="adventure" name="adventure" value="Long adventures">
                         <label for="adventure"> Long adventures, 2 weeks+</label>
                     </div>
-                </div>
-                <div class="row mt-4">
+                  </div>
+                  <div class="row mt-4">
                     <div class="col-12">
                         <label for="about">Tell us a bit more about you.</label><br>
                         <textarea id="about" name="about" rows="5" cols="100">
                         </textarea>
                     </div>
+                  </div>                
+                <div class="modal-footer d-flex justify-content-center">
+                  <button class="btn btn-outline-success my-2" type="submit">Send</button>
                 </div>
             </form>
-          </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button class="btn btn-outline-success my-2" type="submit">Send</button>
           </div>
           <div class="row">
             <div class="col-12 pl-5">
@@ -182,21 +193,23 @@
             <h2 class="modal-title" id="exampleModalLabel">Welcome back!</h2>
           </div>
           <div class="modal-body">
-            <form action="" method="">
+            <form action="signInHello.html" method="POST" id="signInValidation" name="signIn" onsubmit="return signInFormValidate()">
               <div class="row justify-content-center" style="display: grid;">
                   <div class="col-12">
-                      <label for="email"><span class="text-danger">* </span>eMail:</label><br>
-                      <input type="email" id="email" name="email" size="20" value="" required>
+                      <label for="emailSignIn"><span class="text-danger">* </span>eMail:</label><br>
+                      <input type="text" id="emailSignIn" name="emailSignIn" size="20">
+                      <div class="invalid-feedback" id="errorEmailSignIn"></div>
                   </div>
                   <div class="col-12 mt-2">
-                      <label for="pwd"><span class="text-danger">* </span>Password:</label><br>
-                      <input type="password" id="pwd" name="pwd" size="20" required>
+                      <label for="passwordSignIn"><span class="text-danger">* </span>Password:</label><br>
+                      <input type="password" id="passwordSignIn" name="passwordSignIn" size="20">
+                      <div class="invalid-feedback" id="errorPasswordSignIn"></div>
                   </div>
               </div>
-          </form>
-          </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <input class="btn btn-outline-success my-2" type="submit" value="Send">
+              <div class="modal-footer d-flex justify-content-center">
+                <input class="btn btn-outline-success my-2" type="submit" value="Send">
+              </div>
+            </form>
           </div>
           <div class="row">
             <div class="col-12 pl-5">
@@ -297,27 +310,31 @@
         </div>
       </div>
     </section>
-    <form action="" id="contact" class="row my-3 px-5 justify-content-center">
+    <form action="commentsHello.html" id="contactFormId" name="contactForm" onsubmit="return contactFormValidate()" class="row my-3 px-5 justify-content-center">
       <div class="col-12">
         <h2 class="text-center py-3">Contact us</h2>
       </div>
-      
-        <div class="col-md-4">
-          <label for="fname"><span class="text-danger">* </span>First name:</label><br>
-          <input type="text" id="fname" name="fname" required><br><br>
-          <label for="lname"><span class="text-danger">* </span>Last name:</label><br>
-          <input type="text" id="lname" name="lname" required><br>
-        </div>
-        <div class="col-md-4">
-          <label for="comments"><span class="text-danger">* </span>What would you like to know?:</label><br>
-          <textarea id="comments" name="comments" rows="5" cols="60" required>
-          </textarea>
-        </div>
-        <div class="col-12 text-center">
-          <input class="btn btn-outline-success my-2" type="submit" value="Send"><br>
-          <p class="text-danger mt-2" style="font-size: 10px;">*this field is required</p>
-        </div>
-      </form>
+      <div class="col-md-4">
+        <label for="firstNameContact"><span class="text-danger">* </span>First name:</label><br>
+        <input type="text" id="firstNameContact" name="firstNameContact"><br>
+        <div class="invalid-feedback" id="errorFirstNameContact"></div>
+        <label for="lastNameContact"><span class="text-danger">* </span>Last name:</label><br>
+        <input type="text" id="lastNameContact" name="lastNameContact"><br>
+        <div class="invalid-feedback" id="errorLastNameContact"></div>
+        <label for="emailContact"><span class="text-danger">* </span>eMail:</label><br>
+        <input type="text" id="emailContact" name="emailContact">
+        <div class="invalid-feedback" id="errorEmailContact"></div>
+      </div>
+      <div class="col-md-4">
+        <label for="comments"><span class="text-danger">* </span>What would you like to know?:</label><br>
+        <textarea id="comments" name="comments" rows="6" cols="60"></textarea>
+        <div class="invalid-feedback" id="errorComments"></div>
+      </div>
+      <div class="col-12 text-center">
+        <input class="btn btn-outline-success my-2" type="submit" value="Send"><br>
+        <p class="text-danger mt-2" style="font-size: 10px;">*this field is required</p>
+      </div>
+    </form>
     <footer id="footer" class="row my-3 px-5 py-3 mr-0">
       <div class="col-12 col-md-6 pb-2">
         <h4>Motorhome Adventure</h4>
@@ -346,31 +363,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>   
-<!--     <script>
-      // When the user clicks on div, open the popup
-      function openRegisterForm() {
-        var popup = document.getElementById("register");
-        popup.classList.add("show");
-      }
-      function closeRegisterForm() {
-        var popup = document.getElementById("register");
-        popup.classList.remove("show");
-      }
-      function overlayOn() {
-        document.getElementById("overlay").style.display = "block";
-      }
-      function overlayOff() {
-        document.getElementById("overlay").style.display = "none";
-      }
-      function openSignInForm() {
-        var popup = document.getElementById("sign-in");
-        popup.classList.add("show");
-      }
-      function closeSignInForm() {
-        var popup = document.getElementById("sign-in");
-        popup.classList.remove("show");
-      }
-      </script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="formvalidation.js" type="text/javascript"></script>   
   </body>
 </html>

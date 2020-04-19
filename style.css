@@ -49,6 +49,7 @@ h1{
   border-color: #000D32;
 }
 /*register form*/
+
 .modal-footer{
   border: none;
 }
@@ -60,6 +61,12 @@ input[type=text], input[type=email], input[type=password], select, textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+}
+.invalid-feedback{
+    display: block;
+}
+.error{
+    border: 1px solid #dc3545!important;
 }
 /*meet section*/
 .section-line{
