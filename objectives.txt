@@ -1,0 +1,22 @@
+Objectiu:
+- Crear una pàgina web per reunir informació sobre el món de l'autocaravana.
+- Crear plataforma per buscar companys de ruta i conèixer altres famílies. Crear una comunitat.
+- Donar la posibilitat de llogar una autocaravana.
+
+Target:
+- Autocaravanistes i campistes que busquin informació pràctica sobre el món del caravaning.
+- Persones interessades en viatjar en autocaravana o camper i que vulguin compartir l'experiència amb altra gent. Famílies, parelles, singles.
+- Expats o turistes que vulguin iniciar-se a Espanya en la vida campista.
+- Persones que vulguin llogar una autocaravana.
+
+Funcionalitats:
+- Agregador de pàgines ja creades de:
+    · Llocs on pernoctar.
+    · Tendes físiques i online on comprar productes relacionats amb el món campista.
+    · Comunitats campistes a les xarxes.
+- Aplicació on trobar gent similar per compartir viatges:
+    · Formulari de registre amb dades personals i interessos. Creació de botó per accedir a una finestra popup amb el formulari.
+    · Botó per iniciar la sessió en l'aplicació. Finestra popup.
+    · Xat a on la gent pugui parlar per conèixer's.
+- Link a plataforma de lloguer d'autocaravanes i campers.
+- Blog
