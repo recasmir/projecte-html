@@ -20,3 +20,7 @@ Funcionalitats:
     · Xat a on la gent pugui parlar per conèixer's.
 - Link a plataforma de lloguer d'autocaravanes i campers.
 - Blog
+- Idiomes:
+    · Anglès
+    · Català
+    · Castellà
