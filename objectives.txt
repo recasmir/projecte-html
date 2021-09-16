@@ -1,5 +1,5 @@
 Objectiu:
-- Crear una pàgina web per reunir informació sobre el món de l'autocaravana.
+- Crear una pàgina web per reunir informació sobre el món de l'autocaravana. Ajuntar a un mateix lloc tota la informació sobre aquest món que ja està creada.
 - Crear plataforma per buscar companys de ruta i conèixer altres famílies. Crear una comunitat.
 - Donar la posibilitat de llogar una autocaravana.
 
